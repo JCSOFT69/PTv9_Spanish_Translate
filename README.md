@@ -6,10 +6,11 @@ Idioma de destino: Español (castellano)
 Método de trabajo: Traducción desde template.ts oficial → compilación con lrelease (Qt 6.8.7) → .ptl → prueba en Packet Tracer.
 
 1. Resumen
-Se ha completado la traducción al español de Packet Tracer 9.0.1 con 10.641 entradas finished (0 unfinished). A partir de la plantilla (template.ts) y de la versión anterior (Spanish_es.pt) traducida de la versión anterior y utilizando los scripts propios del grupo de traducción  Durante el proceso se han identificado limitaciones estructurales de internacionalización que impiden traducir ciertas cadenas desde el sistema oficial de Qt (.ts/.ptl), incluso cuando la traducción está presente en el archivo compilado.
+Se ha completado la traducción al español de Packet Tracer 9.0.1 con 10.641 entradas finished (0 unfinished). A partir de la plantilla (template.ts) y de la versión anterior (Spanish_es.pt) traducida de la versión anterior y utilizando los scripts propios del grupo de traducción.
+Durante el proceso se han identificado limitaciones estructurales de internacionalización que impiden traducir ciertas cadenas desde el sistema oficial de Qt (.ts/.ptl), incluso cuando la traducción está presente en el archivo compilado.
 Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo Cisco ha implementado (o no) la internacionalización en el código fuente. 
 
-2. Casos resueltos con éxito
+3. Casos resueltos con éxito
    
 2.1. Categorías de dispositivos en CDeviceTypesBox
 Problema: Las categorías de la paleta (Network Devices, Connections, End Devices, etc.) no se traducen aunque estuvieran en el .ts con corchetes ([Network Devices], [Connections], etc.).
