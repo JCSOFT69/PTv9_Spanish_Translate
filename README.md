@@ -18,7 +18,6 @@
 </td>
 </tr>
 </table>
----
 
 ## 📑 Tabla de contenidos
 
