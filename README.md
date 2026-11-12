@@ -38,10 +38,11 @@ Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo C
          Resultado: Parcial. Algunos botones se traducen; otros siguen dependiendo de qt_es.qm. Parece que funciona bien, pero no he mostrado todos los diálogos posibles.
          Petición a Cisco: Incluir qt_es.qm en la instalación de Packet Tracer, o documentar cómo traducir los botones estándar de Qt.
 
-4. Casos no traducibles (limitaciones de Cisco)
+3. Casos no traducibles (limitaciones de Cisco)
          3.1 Tooltips de categorías de dispositivos
          Ejemplo: Legacy Devices, Smart City Ctrl+Alt+T, Home Ctrl+Alt+H.
-         Causa: El código de CDeviceTypesBox construye el tooltip dinámicamente (concatena el nombre de la categoría con el atajo) y llama a QWidget::setToolTip() sin pasar por tr().
+         Causa: El código de CDeviceTypesBox construye el tooltip dinámicamente (concatena el nombre de la categoría con el atajo)
+         y llama a QWidget::setToolTip() sin pasar por tr().
          Petición a Cisco: Envolver en tr() las cadenas de los tooltips, o documentar que no son traducibles.
          
          3.2 Nombres de cables (Copper Straight-Through, Fiber, etc.)
@@ -64,7 +65,7 @@ Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo C
          Causa: El texto que aparece en la interfaz desde estos archivos no pasa por el sistema de traducción de Qt (.ts/.ptl). Se carga dinámicamente desde el .ptd.
          Petición a Cisco: Documentar si el contenido de los .ptd es localizable y, en su caso, cómo hacerlo.
 
-5. Contextos que deben repetirse (inyección multi-contexto)
+4. Contextos que deben repetirse (inyección multi-contexto)
 Contexto
 Cadenas a repetir
 CDeviceButton
@@ -78,7 +79,7 @@ Categorías, conexiones, nombres de dispositivos
 CNetworkComponentBox
 Categorías, conexiones, nombres de cables
 
-Nota: La inyección multi-contexto es necesaria porque Cisco no expone las cadenas en todos los contextos donde Qt las busca. Sin embargo, no es suficiente para los casos de la sección 3 (tooltips, cables, checkbuttons), que requieren cambios en el código fuente de Cisco.
+   Nota: La inyección multi-contexto es necesaria porque Cisco no expone las cadenas en todos los contextos donde Qt las busca. Sin embargo, no es suficiente para los casos de la sección 3 (tooltips, cables, checkbuttons), que requieren cambios en el código fuente de Cisco.
 
 5. Peticiones concretas a Cisco
 Regenerar template.ts con lupdate actualizado para incluir cadenas omitidas (Accessibility, CBaseDeviceTemplateManager, cables en CDeviceSpecificBox, etc.).
