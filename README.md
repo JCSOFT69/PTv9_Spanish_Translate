@@ -11,7 +11,7 @@ Durante el proceso se han identificado limitaciones estructurales de internacion
 Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo Cisco ha implementado (o no) la internacionalización en el código fuente. 
 2. Casos resueltos con éxito
    
-2.1. Categorías de dispositivos en CDeviceTypesBox
+ 2.1. Categorías de dispositivos en CDeviceTypesBox
 Problema: Las categorías de la paleta (Network Devices, Connections, End Devices, etc.) no se traducen aunque estuvieran en el .ts con corchetes ([Network Devices], [Connections], etc.).
 Causa: Packet Tracer 9.0.1 busca las cadenas sin corchetes en el contexto CDeviceTypesBox, no con corchetes. El template.ts oficial solo expone la variante con corchetes.
 Solución aplicada: Añadir las variantes sin corchetes en CDeviceTypesBox:
