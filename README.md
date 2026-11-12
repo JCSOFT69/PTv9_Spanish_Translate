@@ -133,7 +133,7 @@ Los autores y colaboradores no se hacen responsables de posibles errores, incomp
 
 ---
 
-## 1. Resumen
+## 1. Resumen de problemas técnicos
 
 Se ha completado la traducción al español de **Packet Tracer 9.0.1** con **10.641 entradas `finished` (0 `unfinished`)**. A partir de la plantilla (`template.ts`) y de la versión anterior (`Spanish_es.pt`) traducida de la versión previa, utilizando los scripts propios del grupo de traducción.
 
