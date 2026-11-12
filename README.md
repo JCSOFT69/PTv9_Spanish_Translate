@@ -3,13 +3,14 @@ Traducción de Packet Tracer v9.0 a español
 Informe técnico: Limitaciones de internacionalización en Cisco Packet Tracer 9.0.1.0858
 Versión analizada: Cisco Packet Tracer 9.0.1.0858
 Idioma de destino: Español (castellano)
-Método de trabajo: Traducción desde template.ts oficial → compilación con lrelease (Qt 6.8.7) → .ptl → prueba en Packet Tracer.
+Método de trabajo: Traducción desde template.ts oficial → compilación con linguist.exe (Qt 6.8.7) → .ptl → prueba en Packet Tracer.
 
 1. Resumen
 Se ha completado la traducción al español de Packet Tracer 9.0.1 con 10.641 entradas finished (0 unfinished). A partir de la plantilla (template.ts) y de la versión anterior (Spanish_es.pt) traducida de la versión anterior y utilizando los scripts propios del grupo de traducción.
+
 Durante el proceso se han identificado limitaciones estructurales de internacionalización que impiden traducir ciertas cadenas desde el sistema oficial de Qt (.ts/.ptl), incluso cuando la traducción está presente en el archivo compilado.
 Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo Cisco ha implementado (o no) la internacionalización en el código fuente. 
-2. Casos resueltos con éxito
+3. Casos resueltos con éxito
    
           2.1. Categorías de dispositivos en CDeviceTypesBox
          Problema: Las categorías de la paleta (Network Devices, Connections, End Devices, etc.) no se traducen aunque estuvieran en el .ts con corchetes ([Network Devices], [Connections], etc.).
@@ -37,7 +38,7 @@ Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo C
          Resultado: Parcial. Algunos botones se traducen; otros siguen dependiendo de qt_es.qm. Parece que funciona bien, pero no he mostrado todos los diálogos posibles.
          Petición a Cisco: Incluir qt_es.qm en la instalación de Packet Tracer, o documentar cómo traducir los botones estándar de Qt.
 
-3. Casos no traducibles (limitaciones de Cisco)
+4. Casos no traducibles (limitaciones de Cisco)
          3.1 Tooltips de categorías de dispositivos
          Ejemplo: Legacy Devices, Smart City Ctrl+Alt+T, Home Ctrl+Alt+H.
          Causa: El código de CDeviceTypesBox construye el tooltip dinámicamente (concatena el nombre de la categoría con el atajo) y llama a QWidget::setToolTip() sin pasar por tr().
@@ -63,7 +64,7 @@ Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo C
          Causa: El texto que aparece en la interfaz desde estos archivos no pasa por el sistema de traducción de Qt (.ts/.ptl). Se carga dinámicamente desde el .ptd.
          Petición a Cisco: Documentar si el contenido de los .ptd es localizable y, en su caso, cómo hacerlo.
 
-4. Contextos que deben repetirse (inyección multi-contexto)
+5. Contextos que deben repetirse (inyección multi-contexto)
 Contexto
 Cadenas a repetir
 CDeviceButton
