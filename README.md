@@ -1,6 +1,6 @@
 <table border="0">
 <tr>
-<td width="220" valign="top">
+<td width="170" valign="top">
   <img src="logo.png" alt="Logo Traducción Packet Tracer ES" width="150">
 </td>
 <td valign="top">
