@@ -12,31 +12,31 @@ Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo C
 
 2.- Casos resueltos con éxito
    
-      2.1.- Categorías de dispositivos en CDeviceTypesBox
-      Problema: Las categorías de la paleta (Network Devices, Connections, End Devices, etc.) no se traducen aunque estuvieran en el .ts con corchetes ([Network Devices], [Connections], etc.).
-      Causa: Packet Tracer 9.0.1 busca las cadenas sin corchetes en el contexto CDeviceTypesBox, no con corchetes. El template.ts oficial solo expone la variante con corchetes.
-      Solución aplicada: Añadir las variantes sin corchetes en CDeviceTypesBox:
-      Resultado: Las categorías se muestran traducidas correctamente.
-      
-      2.2.- Accessibility en el menú Ayuda
-      Problema: El ítem Accessibility del menú Ayuda no aparecía en template.ts y no se traducía.
-      Causa: Cisco lo excluyó de template.ts (probablemente por una actualización de la plantilla sin regenerar con lupdate).
-      Solución aplicada: Se localizó el contexto buscando cadenas cercanas en el .ts y se añadió manualmente:
-      Resultado: Accessibility se traduce correctamente.
-      
-      2.3.- Colores en CAdministrativeOptionsBase
-      Problema: Al traducir los nombres de color (Black, White, Red, etc.) en el panel Preferencias → Colores, el panel se queda en negro y no se puede cambiar el color.
-      Causa: Packet Tracer usa el texto del botón para construir un QColor.
-      Solución aplicada: No traducir esas 10 entradas (marcarlas como sin traducir en el .ts, o traducir con el mismo valor), para que Qt haga el cambio al inglés y QColor funcione.
-      Resultado: El panel de colores funciona correctamente.
-      Evidencia: Otras traducciones documentan el mismo problema y aplica una solución equivalente a nivel binario (marcar las entradas como obsolete, tag 0x04). Nuestra solución es más limpia (en el .ts).
-      
-      2.4.- Botones estándar de Qt (OK / Yes / No / Cancel / Close)
-      Problema: Los botones OK, Yes, No, Cancel, Close no se traducen.
-      Causa: Son botones estándar de Qt (QMessageBox, QDialogButtonBox) que dependen de qt_es.qm, no del .ptl de Packet Tracer.
-      Solución aplicada: Se añadió el contexto QPlatformTheme con las traducciones:
-      Resultado: Parcial. Algunos botones se traducen; otros siguen dependiendo de qt_es.qm. Parece que funciona bien, pero no he mostrado todos los diálogos posibles.
-      Petición a Cisco: Incluir qt_es.qm en la instalación de Packet Tracer, o documentar cómo traducir los botones estándar de Qt.
+   2.1.- Categorías de dispositivos en CDeviceTypesBox
+   Problema: Las categorías de la paleta (Network Devices, Connections, End Devices, etc.) no se traducen aunque estuvieran en el .ts con corchetes ([Network Devices], [Connections], etc.).
+   Causa: Packet Tracer 9.0.1 busca las cadenas sin corchetes en el contexto CDeviceTypesBox, no con corchetes. El template.ts oficial solo expone la variante con corchetes.
+   Solución aplicada: Añadir las variantes sin corchetes en CDeviceTypesBox:
+   Resultado: Las categorías se muestran traducidas correctamente.
+   
+   2.2.- Accessibility en el menú Ayuda
+   Problema: El ítem Accessibility del menú Ayuda no aparecía en template.ts y no se traducía.
+   Causa: Cisco lo excluyó de template.ts (probablemente por una actualización de la plantilla sin regenerar con lupdate).
+   Solución aplicada: Se localizó el contexto buscando cadenas cercanas en el .ts y se añadió manualmente:
+   Resultado: Accessibility se traduce correctamente.
+   
+   2.3.- Colores en CAdministrativeOptionsBase
+   Problema: Al traducir los nombres de color (Black, White, Red, etc.) en el panel Preferencias → Colores, el panel se queda en negro y no se puede cambiar el color.
+   Causa: Packet Tracer usa el texto del botón para construir un QColor.
+   Solución aplicada: No traducir esas 10 entradas (marcarlas como sin traducir en el .ts, o traducir con el mismo valor), para que Qt haga el cambio al inglés y QColor funcione.
+   Resultado: El panel de colores funciona correctamente.
+   Evidencia: Otras traducciones documentan el mismo problema y aplica una solución equivalente a nivel binario (marcar las entradas como obsolete, tag 0x04). Nuestra solución es más limpia (en el .ts).
+   
+   2.4.- Botones estándar de Qt (OK / Yes / No / Cancel / Close)
+   Problema: Los botones OK, Yes, No, Cancel, Close no se traducen.
+   Causa: Son botones estándar de Qt (QMessageBox, QDialogButtonBox) que dependen de qt_es.qm, no del .ptl de Packet Tracer.
+   Solución aplicada: Se añadió el contexto QPlatformTheme con las traducciones:
+   Resultado: Parcial. Algunos botones se traducen; otros siguen dependiendo de qt_es.qm. Parece que funciona bien, pero no he mostrado todos los diálogos posibles.
+   Petición a Cisco: Incluir qt_es.qm en la instalación de Packet Tracer, o documentar cómo traducir los botones estándar de Qt.
 
 3.- Casos no traducibles (limitaciones de Cisco)
       3.1.- Tooltips de categorías de dispositivos
