@@ -38,30 +38,30 @@ Estas limitaciones no son fallos de la traducción, sino consecuencia de cómo C
          Petición a Cisco: Incluir qt_es.qm en la instalación de Packet Tracer, o documentar cómo traducir los botones estándar de Qt.
 
 3. Casos no traducibles (limitaciones de Cisco)
-3.1 Tooltips de categorías de dispositivos
-Ejemplo: Legacy Devices, Smart City Ctrl+Alt+T, Home Ctrl+Alt+H.
-Causa: El código de CDeviceTypesBox construye el tooltip dinámicamente (concatena el nombre de la categoría con el atajo) y llama a QWidget::setToolTip() sin pasar por tr().
-Petición a Cisco: Envolver en tr() las cadenas de los tooltips, o documentar que no son traducibles.
-
-3.2 Nombres de cables (Copper Straight-Through, Fiber, etc.)
-Causa: Packet Tracer 9.0.1 busca los nombres de cables en un contexto o con una cadena que no está expuesta en template.ts. Aunque el .ptl chino los tiene en CDeviceSpecificBox, CDeviceButton, CNetworkComponentBox y CTranslationDB, no se traducen en la interfaz.
-Evidencia:
-El template.ts oficial sólo los expone en CNetworkComponentBox (no en CDeviceSpecificBox).
-Petición a Cisco: Documentar el contexto y formato exactos que Packet Tracer usa para los nombres de cables en 9.0.1, o exponerlos en template.ts con el contexto correcto.
-
-3.3 Checkbuttons del gestor de plantillas (CBaseDeviceTemplateManager)
-Problema: Los checkbuttons del gestor de plantillas de dispositivos no se traducen.
-Evidencia:
-El contexto CBaseDeviceTemplateManager no está expuesto en template.ts.
-Se han añadido manualmente las cadenas (Browse..., Clear, Custom Icon, Icon File:, etc.) y estas se muestran traducidas que están debajo de los checkbuttons.
-Causa probable: El código no pasa las cadenas por tr() en el punto donde se muestran los checkbuttons (se construyen dinámicamente o se usan como datos).
-Petición a Cisco: Exponer el contexto CBaseDeviceTemplateManager en template.ts con las cadenas de los checkbuttons, o documentar que no son traducibles. Añadir la parte debajo de los checkbuttons para que esté en template.ts.
-
-3.4 Archivos .ptd en la carpeta templates
-Observación: Algunos ítems de la interfaz provienen de archivos .ptd (Packet Tracer Document) ubicados en la carpeta templates. Estos archivos están comprimidos (similar a .pkz) y contienen una mezcla de datos y JavaScript. Corresponden a los elementos de IoT. 
-
-Causa: El texto que aparece en la interfaz desde estos archivos no pasa por el sistema de traducción de Qt (.ts/.ptl). Se carga dinámicamente desde el .ptd.
-Petición a Cisco: Documentar si el contenido de los .ptd es localizable y, en su caso, cómo hacerlo.
+         3.1 Tooltips de categorías de dispositivos
+         Ejemplo: Legacy Devices, Smart City Ctrl+Alt+T, Home Ctrl+Alt+H.
+         Causa: El código de CDeviceTypesBox construye el tooltip dinámicamente (concatena el nombre de la categoría con el atajo) y llama a QWidget::setToolTip() sin pasar por tr().
+         Petición a Cisco: Envolver en tr() las cadenas de los tooltips, o documentar que no son traducibles.
+         
+         3.2 Nombres de cables (Copper Straight-Through, Fiber, etc.)
+         Causa: Packet Tracer 9.0.1 busca los nombres de cables en un contexto o con una cadena que no está expuesta en template.ts. Aunque el .ptl chino los tiene en CDeviceSpecificBox, CDeviceButton, CNetworkComponentBox y CTranslationDB, no se traducen en la interfaz.
+         Evidencia:
+         El template.ts oficial sólo los expone en CNetworkComponentBox (no en CDeviceSpecificBox).
+         Petición a Cisco: Documentar el contexto y formato exactos que Packet Tracer usa para los nombres de cables en 9.0.1, o exponerlos en template.ts con el contexto correcto.
+         
+         3.3 Checkbuttons del gestor de plantillas (CBaseDeviceTemplateManager)
+         Problema: Los checkbuttons del gestor de plantillas de dispositivos no se traducen.
+         Evidencia:
+         El contexto CBaseDeviceTemplateManager no está expuesto en template.ts.
+         Se han añadido manualmente las cadenas (Browse..., Clear, Custom Icon, Icon File:, etc.) y estas se muestran traducidas que están debajo de los checkbuttons.
+         Causa probable: El código no pasa las cadenas por tr() en el punto donde se muestran los checkbuttons (se construyen dinámicamente o se usan como datos).
+         Petición a Cisco: Exponer el contexto CBaseDeviceTemplateManager en template.ts con las cadenas de los checkbuttons, o documentar que no son traducibles. Añadir la parte debajo de los checkbuttons para que esté en template.ts.
+         
+         3.4 Archivos .ptd en la carpeta templates
+         Observación: Algunos ítems de la interfaz provienen de archivos .ptd (Packet Tracer Document) ubicados en la carpeta templates. Estos archivos están comprimidos (similar a .pkz) y contienen una mezcla de datos y JavaScript. Corresponden a los elementos de IoT. 
+         
+         Causa: El texto que aparece en la interfaz desde estos archivos no pasa por el sistema de traducción de Qt (.ts/.ptl). Se carga dinámicamente desde el .ptd.
+         Petición a Cisco: Documentar si el contenido de los .ptd es localizable y, en su caso, cómo hacerlo.
 
 4. Contextos que deben repetirse (inyección multi-contexto)
 Contexto
