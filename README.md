@@ -12,6 +12,11 @@
 
 ## 📑 Tabla de contenidos
 
+- [📦 Requisitos de instalación](#-requisitos-de-instalación)
+- [📂 Ubicación de los archivos instalados](#-ubicación-de-los-archivos-instalados)
+- [⚙️ Cómo activar la traducción](#️-cómo-activar-la-traducción)
+- [🛠️ Problemas comunes](#️-problemas-comunes)
+- [👥 Créditos](#-créditos)
 - [1. Resumen](#1-resumen)
 - [2. Casos resueltos con éxito](#2-casos-resueltos-con-éxito)
   - [2.1. Categorías de dispositivos en CDeviceTypesBox](#21-categorías-de-dispositivos-en-cdevicetypesbox)
@@ -26,6 +31,74 @@
 - [4. Contextos que deben repetirse (inyección multi-contexto)](#4-contextos-que-deben-repetirse-inyección-multi-contexto)
 - [5. Peticiones concretas a Cisco](#5-peticiones-concretas-a-cisco)
 - [6. Conclusión](#6-conclusión)
+
+---
+
+## 📦 Requisitos de instalación
+
+- Tener instalada la versión **Cisco Packet Tracer v9.0.1.0858**.
+
+## 📂 Ubicación de los archivos instalados
+
+- `Spanish_es.ptl` → `[Carpeta de PT]\languages\`
+- `CREDITOS.txt` → `[Carpeta de PT]\languages\`
+- `LEEME.txt` → `[Carpeta de PT]\languages\`
+
+**Carpeta de Ayuda web**
+
+- `[Carpeta PT]\help\Spanish_es\`
+
+## ⚙️ Cómo activar la traducción
+
+1. Abra Cisco Packet Tracer.
+2. Vaya a **Options > Preferences**.
+3. En la pestaña **"Interface"**, apartado **"Select Language"**, seleccione `Spanish_es.ptl` como idioma.
+4. Pulse el botón **"Change Language"**.
+5. Reinicie Packet Tracer.
+
+## 🛠️ Problemas comunes
+
+- Si la traducción no aparece, verifique que el archivo esté en la carpeta `languages`.
+- Asegúrese de tener permisos de escritura en la carpeta de instalación. Ejecute el instalador con privilegios de administrador.
+- Hay problemas ajenos a la traducción al castellano. Algunos botones y/o cadenas de texto puede que no se puedan traducir. Es un problema de la interfaz de traducción del software de creación de PT.
+- Los colores de fuentes de texto y fondo de la CLI no pueden ser traducidos. PT no es capaz de gestionar la traducción de los mismos. Por eso se han dejado a propósito en su versión original (en versiones anteriores puede provocar problemas, ya que están traducidos).
+
+---
+
+## 👥 Créditos
+
+### Traductores principales del archivo `Spanish_es.ptl`
+
+- **J.C. Rico** — Coordinación y traducción técnica, revisión y correcciones y scripts de fusión e instalación.
+- **S. Alcaráz** — Traducción técnica, revisiones y correcciones.
+- **R. Gombao** — Traducción técnica, revisiones y correcciones.
+- **J.M. Morales** — Traducción técnica, revisiones y correcciones.
+- **P.J. Roig** — Traducción técnica, revisiones y correcciones.
+- **J.C. Rico** — Traducción Documentación y ayuda en HTML (parcial).
+
+### Agradecimientos especiales
+
+- A la comunidad de usuarios de Packet Tracer en español.
+- A Cisco Systems por desarrollar esta herramienta educativa.
+
+### Información técnica
+
+- **Versión de la traducción:** 1.0
+- **Fecha:** 2026
+- **Compatible con:** Packet Tracer 8.x.x, Packet Tracer 9.x.x.
+
+### ⚖️ Aviso legal (Disclaimer)
+
+Esta traducción es un proyecto comunitario **no oficial**.
+
+No está desarrollada por Cisco Systems, Inc., aunque el propio software permite la incorporación de archivos de idioma personalizados.
+
+Cisco Packet Tracer y sus marcas asociadas son propiedad de sus respectivos titulares.
+
+Esta traducción se proporciona **"tal cual"**, sin garantías de ningún tipo.
+El uso de la misma se realiza bajo la responsabilidad del usuario.
+
+Los autores y colaboradores no se hacen responsables de posibles errores, incompatibilidades o daños derivados de su uso.
 
 ---
 
