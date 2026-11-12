@@ -1,9 +1,11 @@
-# 🌐 Traducción de Cisco Packet Tracer 9.0.1.0858 al Español
+<table border="0">
+<tr>
+<td width="220" valign="top">
+  <img src="logo.png" alt="Logo Traducción Packet Tracer ES" width="200">
+</td>
+<td valign="top">
 
-<!-- LOGO: reemplaza la ruta por la de tu imagen en el repositorio -->
-<p align="center">
-  <img src="logo.png" alt="Logo Traducción Packet Tracer ES" width="180">
-</p>
+# 🌐 Traducción de Cisco Packet Tracer 9.0.1.0858 al Español
 
 **Informe técnico:** Limitaciones de internacionalización en Cisco Packet Tracer 9.0.1.0858
 
@@ -13,6 +15,9 @@
 
 **Método de trabajo:** Traducción desde `template.ts` oficial → compilación con `linguist.exe` (Qt 6.8.7) → `.ptl` → prueba en Packet Tracer
 
+</td>
+</tr>
+</table>
 ---
 
 ## 📑 Tabla de contenidos
