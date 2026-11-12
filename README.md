@@ -1,5 +1,10 @@
 # 🌐 Traducción de Cisco Packet Tracer 9.0.1.0858 al Español
 
+<!-- LOGO: reemplaza la ruta por la de tu imagen en el repositorio -->
+<p align="center">
+  <img src="logo.png" alt="Logo Traducción Packet Tracer ES" width="180">
+</p>
+
 **Informe técnico:** Limitaciones de internacionalización en Cisco Packet Tracer 9.0.1.0858
 
 **Versión analizada:** `9.0.1.0858`
@@ -13,6 +18,7 @@
 ## 📑 Tabla de contenidos
 
 - [📦 Requisitos de instalación](#-requisitos-de-instalación)
+- [📥 Descarga e instalación](#-descarga-e-instalación)
 - [📂 Ubicación de los archivos instalados](#-ubicación-de-los-archivos-instalados)
 - [⚙️ Cómo activar la traducción](#️-cómo-activar-la-traducción)
 - [🛠️ Problemas comunes](#️-problemas-comunes)
@@ -37,6 +43,27 @@
 ## 📦 Requisitos de instalación
 
 - Tener instalada la versión **Cisco Packet Tracer v9.0.1.0858**.
+
+## 📥 Descarga e instalación
+
+En la sección de **Releases** de este repositorio encontrarás dos opciones de instalación:
+
+### Opción A — Instalador completo (recomendado)
+
+- **Archivo:** `TraduccionPacketTracerES-v9.0.1.0858_v1.0.exe`
+- **Tipo:** Instalador generado con **Inno Setup**.
+- **Qué instala:**
+  - El archivo `Spanish_es.ptl` en `[Carpeta de PT]\languages\`.
+  - Los archivos de créditos y léeme (`CREDITOS.txt`, `LEEME.txt`).
+  - **Toda la ayuda web en HTML** en las carpetas de PT que tienen copia en inglés (`[Carpeta PT]\help\Spanish_es\`).
+- **Requisitos:** Ejecutar como administrador.
+
+### Opción B — Solo el archivo `.ptl` (ligero)
+
+- **Archivo:** `instalar_traduccion_es.bat` (script de PowerShell).
+- **Qué instala:** Únicamente el archivo `Spanish_es.ptl` en `[Carpeta de PT]\languages\`.
+- **Requisitos:** Ejecutar como administrador.
+- **Nota:** No instala la ayuda web en HTML.
 
 ## 📂 Ubicación de los archivos instalados
 
