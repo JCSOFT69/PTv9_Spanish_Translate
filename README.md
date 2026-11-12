@@ -1,4 +1,4 @@
-# PTv9_Spanish_Translate
+# Traducción de Packet Tracer v9.0.1.0858
 Traducción de Packet Tracer v9.0 a español
 Informe técnico: Limitaciones de internacionalización en Cisco Packet Tracer 9.0.1.0858
 Versión analizada: Cisco Packet Tracer 9.0.1.0858
