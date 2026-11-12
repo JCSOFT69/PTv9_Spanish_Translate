@@ -1,7 +1,6 @@
 # Traducción de Packet Tracer v9.0.1.0858 a castellano
 
 Informe técnico: Limitaciones de internacionalización en Cisco Packet Tracer 9.0.1.0858
-
 Versión analizada: Cisco Packet Tracer 9.0.1.0858
 
 Idioma de destino: Español (castellano)
