@@ -27,7 +27,7 @@
 - [⚙️ Cómo activar la traducción](#️-cómo-activar-la-traducción)
 - [🛠️ Problemas comunes](#️-problemas-comunes)
 - [👥 Créditos](#-créditos)
-- [1. Resumen de problemas técnicos](#1-resumen)
+- [1. Resumen de problemas técnicos](#1-resumen-de-problemas-técnicos)
 - [2. Casos resueltos con éxito](#2-casos-resueltos-con-éxito)
   - [2.1. Categorías de dispositivos en CDeviceTypesBox](#21-categorías-de-dispositivos-en-cdevicetypesbox)
   - [2.2. Accessibility en el menú Ayuda](#22-accessibility-en-el-menú-ayuda)
