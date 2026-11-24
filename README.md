@@ -101,7 +101,7 @@ En la sección de **Releases** de este repositorio encontrarás dos opciones de 
 ### Traductores principales del archivo `Spanish_es.ptl`
 
 - **J.C. Rico** — Coordinación y traducción técnica, revisión y correcciones y scripts de fusión e instalación.
-- **S. Alcaráz** — Traducción técnica, revisiones y correcciones.
+- **S. Alcaraz** — Traducción técnica, revisiones y correcciones.
 - **R. Gombao** — Traducción técnica, revisiones y correcciones.
 - **J.M. Morales** — Traducción técnica, revisiones y correcciones.
 - **P.J. Roig** — Traducción técnica, revisiones y correcciones.
